@@ -1,14 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
 using System.Runtime.Serialization;
 
 namespace SPZ_Lab6.Model
 {
-    
     static class Hotel
     {
         static public int CountRooms = 100;
@@ -27,7 +23,6 @@ namespace SPZ_Lab6.Model
                 HotelRooms.Add(new HotelRoom(i));
             }
         }
-
         static public void Generate()
         {
             int numberOccupiedRooms = rand.Next(30, 60);
@@ -45,7 +40,6 @@ namespace SPZ_Lab6.Model
                     HotelDictionary[number] = new Occupant();
                     Income += HotelDictionary[number].Days * HotelRooms[number - 1].Price;
                     Form1.Occupied++;
-
                 }
             }
         }
@@ -54,9 +48,7 @@ namespace SPZ_Lab6.Model
             while(Form1.Occupied < 100)
             {
             Filling(CountRooms); 
-            }
-            
+            } 
         }
-
     }
 }

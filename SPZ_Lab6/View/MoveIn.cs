@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SPZ_Lab6.Model;
 
@@ -45,17 +40,14 @@ namespace SPZ_Lab6.View
         {
             sum_label.Text = (decimal.Parse(price_label.Text) * days_numeric.Value).ToString();
         }
-
         private void days_numeric_ValueChanged(object sender, EventArgs e)
         {
             Sum();
         }
-
         private void MoveIn_Load(object sender, EventArgs e)
         {
             ChangeValue();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if(lastname_textBox.Text != "" && firstname_textBox.Text != "" && Form1.Occupied < Hotel.CountRooms)

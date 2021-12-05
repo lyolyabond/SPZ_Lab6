@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 using SPZ_Lab6.Model;
@@ -27,8 +20,7 @@ namespace SPZ_Lab6
                 else
                 { checkIn = true; Hundred = false; }
                 if (occupied == Hotel.CountRooms)
-                    Hundred = true;
-                   
+                    Hundred = true;    
             }
         } 
         public static int free;
@@ -87,7 +79,6 @@ namespace SPZ_Lab6
                     Display();
              }  
         }
-
         private void moveOut_button_Click_1(object sender, EventArgs e)
         {
             MoveOut moveOut = new MoveOut();
